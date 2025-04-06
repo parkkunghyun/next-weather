@@ -18,6 +18,10 @@ jobs:
           service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           project_id: gcp-project-452602
 
+      - name: Create env file
+        run: |
+          echo "NEXT_PUBLIC_WEATHER_KEY=${{ secrets.NEXT_PUBLIC_WEATHER_KEY }}" >> .env.production
+
       - name: Configure Docker
         run: gcloud auth configure-docker
 
@@ -30,5 +34,4 @@ jobs:
             --image us-central1-docker.pkg.dev/gcp-project-452602/weather-image/next-weather:latest \
             --platform managed \
             --region us-central1 \
-            --allow-unauthenticated \
-            --set-env-vars NEXT_PUBLIC_WEATHER_KEY=${{ secrets.NEXT_PUBLIC_WEATHER_KEY }}
+            --allow-unauthenticated
