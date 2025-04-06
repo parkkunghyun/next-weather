@@ -31,4 +31,4 @@ jobs:
             --platform managed \
             --region us-central1 \
             --allow-unauthenticated \
-            --set-env-vars NEXT_PUBLIC_GCP_API_KEY=${{ secrets.NEXT_PUBLIC_WEATHER_KEY }}
+            --set-env-vars NEXT_PUBLIC_WEATHER_KEY=${{ secrets.NEXT_PUBLIC_WEATHER_KEY }}
