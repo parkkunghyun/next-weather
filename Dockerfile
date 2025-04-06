@@ -10,7 +10,7 @@ RUN npm install
 
 # Next.js 앱 소스 파일 복사 및 빌드
 COPY . .
-COPY .env.production .env.production  # ★ 빌드 전에 위치!
+COPY .env.production .env.production
 
 RUN npm run build
 
