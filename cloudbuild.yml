@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '--platform', 'linux/amd64', '-t',  'us-central1-docker.pkg.dev/gcp-project-452602/weather-image:next-weather:latest', '.']
+    args: ['build', '--platform', 'linux/amd64', '-t',  'us-central1-docker.pkg.dev/gcp-project-452602/weather-image/next-weather:latest', '.']
 
 images:
-  - 'us-central1-docker.pkg.dev/gcp-project-452602/weather-image:next-weather:latest'
+  - 'us-central1-docker.pkg.dev/gcp-project-452602/weather-image/next-weather:latest'
